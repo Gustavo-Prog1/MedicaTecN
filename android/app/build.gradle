@@ -94,6 +94,11 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
+    packagingOptions {
+        pickFirst 'lib/x86/libsqlite.so'
+        // Otros pickFirst si es necesario
+    }
+
     namespace "com.alarmproject"
     defaultConfig {
         applicationId "com.alarmproject"
